@@ -22,8 +22,6 @@ public class Boss
 
     public void Magic()
     {
-        for (int i = 0; i <= 10; i++)
-        {
             if (mp >= 5)
             {
                 this.mp -= 5;
@@ -33,7 +31,6 @@ public class Boss
             {
                 Debug.Log("MPが足りないため、魔法が使えない。");
             }
-        }
     }
 }
 
@@ -48,20 +45,20 @@ void Start()
         Debug.Log("配列課題");
 
         //配列の初期化
-        int[] numbers = { 8, 120, 200, 30, 70 };
+        int[] array = { 8, 120, 200, 30, 70 };
 
         //配列の値を順番に表示する
         Debug.Log("配列の値を順番に表示する");
-        for (int i = 0; i < numbers.Length; i++)
+        for (int i = 0; i < array.Length; i++)
         {
-            Debug.Log(numbers[i]);
+            Debug.Log(array[i]);
         }
 
         //配列の値を逆順に表示する
         Debug.Log("配列の値を逆順に表示する");
-        for (int i = numbers.Length - 1; i > -1; i--)
+        for (int i = array.Length - 1; i > -1; i--)
         {
-            Debug.Log(numbers[i]);
+            Debug.Log(array[i]);
         }
 
 
@@ -72,7 +69,10 @@ void Start()
         Boss lastboss = new Boss();
 
         //魔法用の関数を呼び出す
-        lastboss.Magic();
+        for (int i = 0; i <= 10; i++)
+        {
+            lastboss.Magic();
+        }
     }
 
 
